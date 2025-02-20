@@ -236,7 +236,7 @@ a{
 
 /* Feature Cards */
 .feature {
-  background: white;
+  background: #d7f5b6;
   border-radius: 20px;
   padding: 40px;
   text-align: center;
@@ -317,34 +317,43 @@ a{
 /* How VETRA Works Section */
 .how-it-works {
   text-align: center;
-  padding: 120px 10%;
+  padding: 140px 10%;
   background: linear-gradient(180deg, #d8dad8, #DAF7DC);
 }
 
 /* Main Heading */
 .how-it-works .section-heading {
-  font-size: 50px;
-  font-weight: 700;
-  color: #00A676;
+  font-size: 55px;
+  font-weight: 800;
+  color: #00775C;
   text-transform: uppercase;
   position: relative;
   display: inline-block;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   letter-spacing: 2px;
+}
+
+/* Gradient Effect Under Heading */
+.how-it-works .section-heading span {
+  background: linear-gradient(45deg, #00A676, #9EE493);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Subheading */
 .how-it-works .section-subheading {
-  font-size: 20px;
-  color: #666;
-  margin-bottom: 60px;
+  font-size: 22px;
+  color: #444;
+  margin-bottom: 70px;
+  font-weight: 500;
+  opacity: 0.8;
 }
 
 /* Step Container */
 .step-container {
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 90px;
 }
 
 /* Step Box */
@@ -352,10 +361,16 @@ a{
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 60px;
+  gap: 80px;
   opacity: 0;
   transform: translateY(50px);
-  animation: fadeInUp 1.5s ease-in-out forwards;
+  transition: all 0.6s ease-in-out;
+}
+
+/* Animate steps when they come into view */
+.step.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Left-aligned Step */
@@ -370,40 +385,44 @@ a{
 
 /* Step Images */
 .step img {
-  width: 40%;
-  max-width: 450px;
-  border-radius: 20px;
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
+  width: 42%;
+  max-width: 500px;
+  border-radius: 25px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
+/* New hover effect with subtle rotation */
 .step img:hover {
-  transform: scale(1.05);
+  transform: scale(1.08) rotate(2deg);
+  box-shadow: 0px 20px 40px rgba(0, 167, 118, 0.3);
 }
 
 /* Step Content */
 .step-content {
-  max-width: 50%;
+  max-width: 45%;
   text-align: left;
 }
 
 /* Step Titles */
 .step-content h3 {
-  font-size: 26px;
-  font-weight: 700;
-  color: #00A676;
-  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: 800;
+  color: #00775C;
+  margin-bottom: 12px;
+  text-transform: capitalize;
 }
 
 /* Step Descriptions */
 .step-content p {
-  font-size: 18px;
-  color: #555;
-  line-height: 1.6;
+  font-size: 20px;
+  color: #444;
+  line-height: 1.7;
+  font-weight: 400;
 }
 
-/* Fade-in Animation */
-@keyframes fadeInUp {
+/* Fade-in Scroll Effect */
+@keyframes fadeInSlide {
   from {
       opacity: 0;
       transform: translateY(50px);
@@ -417,19 +436,21 @@ a{
 /* CTA Button */
 .cta-button {
   display: inline-block;
-  margin-top: 60px;
-  padding: 18px 35px;
-  font-size: 18px;
+  margin-top: 70px;
+  padding: 20px 40px;
+  font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
-  background-color: #9EE493;
+  background: linear-gradient(45deg, #00A676, #9EE493);
   color: white;
-  border-radius: 10px;
-  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   text-decoration: none;
+  box-shadow: 0px 5px 15px rgba(0, 167, 118, 0.3);
 }
 
 .cta-button:hover {
-  background-color: #00A676;
-  transform: scale(1.1);
+  transform: scale(1.12);
+  box-shadow: 0px 10px 25px rgba(0, 167, 118, 0.5);
 }
+

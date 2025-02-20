@@ -23,23 +23,18 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const steps = document.querySelectorAll(".step");
-  
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry, index) => {
-          if (entry.isIntersecting) {
-            setTimeout(() => {
-              entry.target.style.opacity = "1";
-              entry.target.style.transform = "translateY(0)";
-            }, index * 200);
-          }
+  document.addEventListener("DOMContentLoaded", function() {
+    const steps = document.querySelectorAll('.step');
+
+    function checkSteps() {
+        steps.forEach(step => {
+            const rect = step.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.85) {
+                step.classList.add('visible');
+            }
         });
-      },
-      { threshold: 0.3 }
-    );
-  
-    steps.forEach((step) => observer.observe(step));
+    }
+
+    window.addEventListener('scroll', checkSteps);
+    checkSteps();
   });
-  
