@@ -456,3 +456,118 @@ a{
   box-shadow: 0px 10px 25px rgba(0, 167, 118, 0.5);
 }
 
+
+
+/* App Section */
+.app-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 120px 10%;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glassmorphism Effect */
+.app-content {
+  max-width: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.app-content h2 {
+  font-size: 52px;
+  font-weight: 800;
+  color: #00A676;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+/* Subtitle */
+.app-content p {
+  font-size: 22px;
+  color: #444;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* Download Buttons */
+.download-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.download-buttons a img {
+  width: 180px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 12px;
+}
+
+/* Glowing Hover Effect */
+.download-buttons a img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 20px rgba(158, 228, 147, 0.6);
+}
+
+/* App Image */
+.app-image img {
+  width: 420px;
+  box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+/* App Image Hover Effect */
+.app-image img:hover {
+  transform: scale(1.05) rotate(-2deg);
+  box-shadow: 0px 20px 60px rgba(0, 166, 118, 0.3);
+}
+
+/* Animation Effects */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(40px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Background Animation */
+.app-section::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background: #9EE493;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.3;
+  animation: moveGlow 5s infinite alternate ease-in-out;
+}
+
+@keyframes moveGlow {
+  from {
+      transform: translateY(0px);
+  }
+  to {
+      transform: translateY(30px);
+  }
+}
