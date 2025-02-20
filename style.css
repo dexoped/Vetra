@@ -318,7 +318,7 @@ a{
 .how-it-works {
   text-align: center;
   padding: 140px 10%;
-  background: linear-gradient(180deg, #d8dad8, #DAF7DC);
+ font-family: "Poppins",sans-serif;
 }
 
 /* Main Heading */
@@ -336,7 +336,7 @@ a{
 /* Gradient Effect Under Heading */
 .how-it-works .section-heading span {
   background: linear-gradient(45deg, #00A676, #9EE493);
-  -webkit-background-clip: text;
+ -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
