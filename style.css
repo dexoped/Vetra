@@ -79,7 +79,8 @@ a{
 
 /* "VETRA" Title */
 .item1 {
-    font-size: 85px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 100px;
     background: linear-gradient(90deg, #64CBB3, #00A676);
     -webkit-background-clip: text;
     background-clip: text;
@@ -87,6 +88,7 @@ a{
     text-shadow: 0 4px 8px rgba(100, 203, 179, 0.2);
     position: relative;
     animation: fadeInUp 1.2s ease-in-out forwards;
+    
 }
 
 /* AI-Driven */
@@ -251,8 +253,8 @@ a{
 
 /* Feature Icons */
 .feature img {
-  width: 100px;
-  height: auto;
+  width: 200px;
+  height: 150px;
   margin-bottom: 20px;
   transition: transform 0.4s ease-in-out;
 }
