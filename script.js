@@ -38,3 +38,26 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('scroll', checkSteps);
     checkSteps();
   });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const video = document.getElementById("promo-video");
+    const videoSection = document.querySelector(".video-section");
+
+    function handleVideoPlayback() {
+        const rect = videoSection.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+        
+        if (isVisible) {
+            if (video.paused) {
+                video.play();
+            }
+        } else {
+            if (!video.paused) {
+                video.pause();
+            }
+        }
+    }
+
+    window.addEventListener("scroll", handleVideoPlayback);
+    handleVideoPlayback(); // Run once on page load
+});
